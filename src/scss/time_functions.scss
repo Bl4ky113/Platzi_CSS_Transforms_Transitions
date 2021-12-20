@@ -1,0 +1,55 @@
+* { margin: 0; padding: 0; } 
+
+.wrapper {
+  max-width: 100vw;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template: auto / 1fr 1fr 1fr;
+  grid-template-areas: "main main main";
+}
+
+.main {
+  width: 100vh;
+  height: 80vh;
+
+  margin: 5vh auto;
+  padding: 5vh;
+
+  grid-area: main;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  box-shadow: inset 0 0 15px -10px #000;
+
+  .ball {
+    width: 8vh;
+    height: 8vh;
+
+    border-radius: 30%;
+    
+    &:hover {
+      transform: translateX(60vh);
+    }
+  }
+
+  $balls: 
+    "1" ease blue,
+    "2" ease-in lightblue,
+    "3" ease-out tomato,
+    "4" ease-in-out darkblue,
+    "5" linear red,
+    "6" step-start lightgreen,
+    "7" step-end lime;
+
+  @each $num, $time, $color in $balls {
+    .ball--#{$num} {
+      background-color: $color;
+
+      transition: 1s $time transform;
+    }
+  }
+}

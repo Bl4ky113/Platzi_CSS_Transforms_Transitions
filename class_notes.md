@@ -92,5 +92,21 @@ Se puede agregar un transition all o solo con backface-visibility para darle el 
 Parallax es efecto visual en el cual al hacer scroll en una página web, esta va a hacer un tipo de animación o de efecto. Tiene 
 que ver mucho con la perspectiva que se le puede dar a los elementos usando transform.
 
+# Transitions
+
+transition es una propiedad que nos va a permitir darle una animación a nuestro elemento, cuando este tenga algún cambio. Generalmente por un 
+trigger.
+
+Estas animaciones se le podran definir a algunas propiedades de CSS. Se les define el tiempo de duración de la animación, la funcion de tiempo y 
+si es necesario un delay de la animación.
+
+transition: (property) (duration) (time function) (delay);
+
+## Time Functions
+
+Las times functions son funciones de tiempo en las que se va a determinar el desarrollo de la animación, frente a el timepo. Animación / tiempo.
+Dandole un efecto de cambios en la aceleración. Hay algunas predeterminadas que se pueden usar, pero igualmente se puede crear sus propios time 
+functions.
+
 
 
