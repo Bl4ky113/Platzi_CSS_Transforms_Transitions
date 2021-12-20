@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template: minmax(5vh, auto)/1fr 1fr 1fr;
+  grid-template-areas: "main main main";
+}
+
+.main {
+  perspective: 10px;
+  perspective-origin: 50%;
+  position: relative;
+  background-color: #430149;
+  grid-area: main;
+  overflow-x: hidden;
+}
+.main .section {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: 0 50%;
+}
+.main .section--back {
+  width: 100%;
+  height: auto;
+  transform: translateZ(0px) scale(1);
+}
+.main .section--mid {
+  width: 100%;
+  height: 100%;
+  transform: translateZ(8px) scale(0.2);
+}
+.main .section--mid .card {
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  background-color: white;
+}
+.main .section--mid .card:nth-child(odd) {
+  border: 4px solid red;
+}
+.main .section--mid .card:nth-child(even) {
+  border: 4px solid black;
+}
+.main .section--mid .card--1 {
+  top: 45%;
+}
+.main .section--mid .card:nth-child(odd) {
+  right: 2%;
+}
+.main .section--mid .card:nth-child(even) {
+  left: 2%;
+}
+.main .section--mid .card--2 {
+  top: 90%;
+}
+.main .section--mid .card:nth-child(odd) {
+  right: 4%;
+}
+.main .section--mid .card:nth-child(even) {
+  left: 4%;
+}
+.main .section--mid .card--3 {
+  top: 135%;
+}
+.main .section--mid .card:nth-child(odd) {
+  right: 6%;
+}
+.main .section--mid .card:nth-child(even) {
+  left: 6%;
+}
+.main .section--mid .card--4 {
+  top: 180%;
+}
+.main .section--mid .card:nth-child(odd) {
+  right: 8%;
+}
+.main .section--mid .card:nth-child(even) {
+  left: 8%;
+}
+.main .section--mid .card--5 {
+  top: 225%;
+}
+.main .section--mid .card:nth-child(odd) {
+  right: 10%;
+}
+.main .section--mid .card:nth-child(even) {
+  left: 10%;
+}
+.main .section--mid .card--6 {
+  top: 270%;
+}
+.main .section--mid .card:nth-child(odd) {
+  right: 12%;
+}
+.main .section--mid .card:nth-child(even) {
+  left: 12%;
+}
+.main .section--front {
+  transform: translateZ(4px) scale(0.6);
+  transform-origin: top;
+}
