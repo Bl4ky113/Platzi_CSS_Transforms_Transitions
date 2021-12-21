@@ -108,5 +108,56 @@ Las times functions son funciones de tiempo en las que se va a determinar el des
 Dandole un efecto de cambios en la aceleración. Hay algunas predeterminadas que se pueden usar, pero igualmente se puede crear sus propios time 
 functions.
 
+# Tips de User eXperience
+
+## Diferentes Transitions
+
+Para darle a nuestro elemento de vivides, si eso existe, podemos darle diferentes transitions usando el estilo del elemento, classNames extras
+o triggers.
+
+El usado es darle un transition lento en el elemento y otro rapido en un trigger. Haciendo que cuando se active se mueva rapido, pero lento al 
+devolverse.
+
+## Tiempos de Expera
+
+Algunas veces al tener elementos cómo un nav. La opciones internas de una opción, al mover el mouse fuera del elemento, se desaparecen. 
+Causando frustación y perdida de tiempo. Para evitar esto deberiamos agregar y arreglarlo usando transitions en la visibilidad del objeto, usando 
+propiedades cómo opacity, visibility y en casos extremos display.
+
+## Parpadeo en la animaciones
+
+En todo el curso hemos visto que al hacer un trigger, generalmente hover, las animaciones se empezaban a iniciar y terminar erraticamente. 
+No sé porque ocurren, pero hasta a la profe le ocurria el problema en la clase. 
+
+La forma de solucionarlo es simple, solo debemos poner un wrapper para el elemento y dejarle el trigger a este y no a el elemento. Ya que 
+como el wrapper va a estar quieto sin animación, translate o transition. No le va a afectar el parpadeo o movimiento erratico.
+
+# Propiedades cuales animar y cuales no.
+
+En el procesamiento de una página web, se debe aplicar el style, esto en páginas estaticas cómo wikipedia ocurre generalmente solo en el inicio.
+En elementos con triggers cómo hover ocurre cuando este ocurriendo. Y cuando hacemos algo animado o con transiciones, se aplica cada frame de esta.
+
+Cada propiedad no es igual en el momento de aplicar el style. Por eso se tiene 3 categorias de propiedades dependiendo de cómo afectan el 
+procesamiento de una página web.
+
+El procesamiento de la página es el siguiente:
+
+JS > Style > Layout > Paint > Composite
+
+Este es realizado cada vez que se aplica un cambio visual, en el JS o en general la página.
+
+Los cambios por parte de CSS & más especifico las animaciones y transiciones son en: Layout > Paint > Composite.
+
+Las propiedades que NO debemos animar o transicionar son aquellas que tienen paso o procesamiento de Layout. Cambios a el Box Layout o el Layout en general.
+Algunas que no son recomendadas son las que tienen procesamiento en Paint. Cambios a colores.
+Y las que deberiamos cambiar son las que tienen procesamiento en Composite. Esto es así porque al procesar la propiedad, debe procesarse tambien en todos los procesamientos siguientes.
+
+Hay muy pocas que solo tengan efecto en Composite, aunque si deberiamos evitar a todas las demas de darles un uso intensivo.
+
+Una de las propiedades con menor peso es Transform, haciendolo mejor candidato para ser usado, por ejemplo para mover algo, con translate() que 
+left, top, bottom u right.
+
+# Rendimiento Y Accesibilidad
+
 
 
