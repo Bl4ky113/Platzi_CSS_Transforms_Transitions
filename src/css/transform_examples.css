@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 100vw;
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  overflow-x: hidden;
+}
+
+.section {
+  min-width: 50vh;
+  min-height: 50vh;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 20px -10px #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#example_1 .shadow {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  background-color: darkgreen;
+  position: relative;
+}
+#example_1 .shadow .circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: lightgreen;
+  position: absolute;
+  transition: transform 500ms ease;
+}
+#example_1 .shadow .circle:hover {
+  transform: translate(-12vh, 12vh);
+}
+
+#example_2 {
+  justify-content: space-around;
+}
+#example_2 .square {
+  width: 12vh;
+  height: 12vh;
+  border-radius: 10%;
+  background-color: lightgreen;
+  transition: transform 500ms ease;
+}
+#example_2 .square--rotate:hover {
+  transform: rotate(45deg);
+}
+#example_2 .square--scale:hover {
+  transform: scale(0.25);
+}
+#example_2 .square--skew:hover {
+  transform: skew(37deg);
+}
+#example_2 .square--matrix:hover {
+  transform: matrix(1, 2, -1, 1, 80, 80);
+}
+
+#example_3 {
+  justify-content: space-around;
+}
+#example_3 .square {
+  width: 12vh;
+  height: 12vh;
+  border-radius: 10%;
+  background-color: lightgreen;
+  transition: transform 500ms ease;
+  transform-origin: 25% 75%;
+}
+#example_3 .square--rotate:hover {
+  transform: rotate(45deg);
+}
+#example_3 .square--scale:hover {
+  transform: scale(0.25);
+}
+#example_3 .square--skew:hover {
+  transform: skew(37deg);
+}
+#example_3 .square--matrix:hover {
+  transform: matrix(1, 2, -1, 1, 80, 80);
+}
+
+#example_4 .perspective-wrapper {
+  width: 30vh;
+  height: 30vh;
+  perspective: 100px;
+  position: relative;
+}
+#example_4 .perspective-wrapper .circle {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 500ms ease;
+  position: absolute;
+  background: limegreen;
+  opacity: 0.8;
+}
+#example_4 .perspective-wrapper .circle:hover {
+  transform: rotateX(20deg);
+}
+
+#example_5 .card {
+  width: 20vh;
+  height: 30vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 500ms ease;
+}
+#example_5 .card:hover {
+  transform: rotateY(180deg);
+}
+#example_5 .card .card__face {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+#example_5 .card .card__face--front {
+  background-color: lightgreen;
+}
+#example_5 .card .card__face--back {
+  background-color: darkgreen;
+  transform: rotateX(180deg);
+}
+
+#example_6 .box-wrapper {
+  width: 50vh;
+  padding: 0.5rem;
+  background-color: lightgreen;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#example_6 .box-wrapper:hover .box {
+  transform: scale(1.2) rotate(85deg);
+}
+#example_6 .box-wrapper .box {
+  width: 15vh;
+  height: 15vh;
+  background-color: darkgreen;
+  transition: transform 500ms ease;
+}
