@@ -159,5 +159,17 @@ left, top, bottom u right.
 
 # Rendimiento Y Accesibilidad
 
+## Will Change
 
+Will Change es una propiedad que nos permite resistir un poco la explicación de ariba, haciendo que las propiedades que se procesen en Layout
+cogan un poco más de recursos, pero que tengan mayor rendimiento. 
+
+En esta solo debemos definir las propiedades que necesiten mayor número de recursos.
+
+## Movimiento Reducido
+
+En algunos casos se necesita de movimiento reducido en las animaciones para mayor accesibilidad. La forma de poder cambiar frente a esta 
+opción nuestro style es usar el media Query de: prefers-reduced-motion: reduce.
+
+# Fin Del Curso
 
