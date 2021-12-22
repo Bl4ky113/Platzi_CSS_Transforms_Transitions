@@ -108,6 +108,8 @@ Las times functions son funciones de tiempo en las que se va a determinar el des
 Dandole un efecto de cambios en la aceleración. Hay algunas predeterminadas que se pueden usar, pero igualmente se puede crear sus propios time 
 functions.
 
+cubic-beizer(P1, P2, P3, P4). Donde P1 y P3 estan entre 1 y 0. Hay varios convertidores en la web para hacer estas functions.
+
 # Tips de User eXperience
 
 ## Diferentes Transitions
